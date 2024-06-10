@@ -39,6 +39,8 @@ function App() {
       <hr />
       <br />
       <button onClick={incrementCount}>Increment Count {count}</button>
+      <br />
+      <br />
       <button onClick={CardGenerator}>Add Card</button>
       <p>Total cards are: {cards.length}</p>
       <div className="card-container-2">
