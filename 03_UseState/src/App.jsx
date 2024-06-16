@@ -5,10 +5,10 @@ import ChildComponent from "./ChildComponent";
 
 function App() {
   const [count, setCount] = useState(0);
+  const [childData, setChildData] = useState("No Data");
   const [cards, setCards] = useState([
     // { id: 1, title: "Card 1", content: "Content 1" },
   ]);
-  const [childData, setChildData] = useState("No Data");
 
   function incrementCount() {
     setCount(count + 1);
