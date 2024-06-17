@@ -1,0 +1,40 @@
+import React, { useState } from "react";
+import "./Login.css";
+function Login() {
+  const [user, setUser] = useState("");
+  const [pass, setPass] = useState("");
+
+  const handleUser = (e) => {
+    console.log(e.target.value);
+    setUser(e.target.value);
+  };
+  const handlePass = (e) => {
+    console.log(e.target.value);
+    setPass(e.target.value);
+  };
+  const formsubmit = (e) => {
+    e.preventDefault();
+    alert("Login successfull");
+  };
+
+  return (
+    <>
+      <div className="login-container">
+        <h2>Login</h2>
+        <form onSubmit={formsubmit}>
+          <div className="form-group">
+            <label htmlFor="username">Username</label>
+            <input type="text" name="username" required onChange={handleUser} />
+          </div>
+          <div className="form-group">
+            <label htmlFor="password">password</label>
+            <input type="text" name="password" required onChange={handlePass} />
+          </div>
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </>
+  );
+}
+
+export default Login;
